@@ -1,0 +1,48 @@
+/* dist/pages/Home.svelte.css */
+section.svelte-7henp0 {
+  display: block;
+  background: #eee;
+  height: 100%;
+  width: 100%;
+  padding: 4rem;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 769px) {
+  section.svelte-7henp0 {
+    padding: 1rem;
+  }
+}
+
+/* dist/pages/components/Consent.svelte.css */
+.consent.svelte-1win8lw {
+  position: absolute;
+  max-width: 50rem;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%);
+}
+
+/* dist/pages/components/home/Buttons.svelte.css */
+.rnd.svelte-1po05qo {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+}
+
+/* dist/pages/components/home/Introduction.svelte.css */
+img.svelte-1px73g6 {
+  height: 256px !important;
+  width: 256px !important;
+  box-shadow: 0px 0px 20px 18px #aaa;
+  transition: transform .3s;
+}
+img.svelte-1px73g6:hover {
+  box-shadow: 0px 0px 20px 18px var(--imageShadowColor);
+  transform: scale(1.2);
+}
+@media only screen and (max-width: 769px) {
+  img.svelte-1px73g6 {
+    height: 156px !important;
+    width: 156px !important;
+  }
+}

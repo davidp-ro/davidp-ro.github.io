@@ -1,0 +1,368 @@
+{
+  "inputs": {
+    "css/index.css": {
+      "bytes": 251341,
+      "imports": []
+    },
+    "_snowpack/env.js": {
+      "bytes": 97,
+      "imports": []
+    },
+    "_snowpack/pkg/common/index-6f2deb61.js": {
+      "bytes": 18359,
+      "imports": []
+    },
+    "_snowpack/pkg/svelte/internal.js": {
+      "bytes": 542,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-6f2deb61.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/svelte/store.js": {
+      "bytes": 1785,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-6f2deb61.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/stores.js": {
+      "bytes": 149,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/store.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/Home.svelte.css": {
+      "bytes": 188,
+      "imports": []
+    },
+    "_snowpack/pkg/svelte/transition.js": {
+      "bytes": 313,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-6f2deb61.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/components/home/Introduction.svelte.css": {
+      "bytes": 333,
+      "imports": []
+    },
+    "dist/pages/components/home/Introduction.svelte.js": {
+      "bytes": 8196,
+      "imports": [
+        {
+          "path": "dist/pages/components/home/Introduction.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/transition.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/components/home/Buttons.svelte.css": {
+      "bytes": 61,
+      "imports": []
+    },
+    "dist/pages/components/home/Buttons.svelte.js": {
+      "bytes": 6789,
+      "imports": [
+        {
+          "path": "dist/pages/components/home/Buttons.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/Home.svelte.js": {
+      "bytes": 4019,
+      "imports": [
+        {
+          "path": "dist/pages/Home.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/transition.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/components/home/Introduction.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/components/home/Buttons.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/About.svelte.js": {
+      "bytes": 715,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/Work.svelte.js": {
+      "bytes": 711,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/Contact.svelte.js": {
+      "bytes": 723,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/pages/components/Consent.svelte.css": {
+      "bytes": 101,
+      "imports": []
+    },
+    "dist/pages/components/Consent.svelte.js": {
+      "bytes": 1273,
+      "imports": [
+        {
+          "path": "dist/pages/components/Consent.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/svelte.js": {
+      "bytes": 59,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-6f2deb61.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/MediaQuery.svelte.js": {
+      "bytes": 2553,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/UpdateMQ.svelte.js": {
+      "bytes": 702,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/App.svelte.js": {
+      "bytes": 13118,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/stores.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/Home.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/About.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/Work.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/Contact.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/pages/components/Consent.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/MediaQuery.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/UpdateMQ.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "dist/index.js": {
+      "bytes": 553,
+      "imports": [
+        {
+          "path": "_snowpack/env.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "dist/App.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../~~bundle~~/css/index.css": {
+      "imports": [],
+      "inputs": {
+        "css/index.css": {
+          "bytesInOutput": 242167
+        }
+      },
+      "bytes": 242294
+    },
+    "../~~bundle~~/dist/index.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "inputs": {
+        "_snowpack/env.js": {
+          "bytesInOutput": 186
+        },
+        "_snowpack/pkg/common/index-6f2deb61.js": {
+          "bytesInOutput": 14364
+        },
+        "_snowpack/pkg/svelte/internal.js": {
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/svelte/store.js": {
+          "bytesInOutput": 1231
+        },
+        "dist/stores.js": {
+          "bytesInOutput": 67
+        },
+        "dist/pages/Home.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/svelte/transition.js": {
+          "bytesInOutput": 211
+        },
+        "dist/pages/components/home/Introduction.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "dist/pages/components/home/Introduction.svelte.js": {
+          "bytesInOutput": 8156
+        },
+        "dist/pages/components/home/Buttons.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "dist/pages/components/home/Buttons.svelte.js": {
+          "bytesInOutput": 6682
+        },
+        "dist/pages/Home.svelte.js": {
+          "bytesInOutput": 3707
+        },
+        "dist/pages/About.svelte.js": {
+          "bytesInOutput": 585
+        },
+        "dist/pages/Work.svelte.js": {
+          "bytesInOutput": 581
+        },
+        "dist/pages/Contact.svelte.js": {
+          "bytesInOutput": 593
+        },
+        "dist/pages/components/Consent.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "dist/pages/components/Consent.svelte.js": {
+          "bytesInOutput": 1092
+        },
+        "_snowpack/pkg/svelte.js": {
+          "bytesInOutput": 0
+        },
+        "dist/MediaQuery.svelte.js": {
+          "bytesInOutput": 2400
+        },
+        "dist/UpdateMQ.svelte.js": {
+          "bytesInOutput": 555
+        },
+        "dist/App.svelte.js": {
+          "bytesInOutput": 13385
+        },
+        "dist/index.js": {
+          "bytesInOutput": 208
+        }
+      },
+      "bytes": 54732
+    },
+    "../~~bundle~~/dist/index.css": {
+      "imports": [],
+      "inputs": {
+        "dist/pages/Home.svelte.css": {
+          "bytesInOutput": 233
+        },
+        "dist/pages/components/Consent.svelte.css": {
+          "bytesInOutput": 125
+        },
+        "dist/pages/components/home/Buttons.svelte.css": {
+          "bytesInOutput": 77
+        },
+        "dist/pages/components/home/Introduction.svelte.css": {
+          "bytesInOutput": 388
+        }
+      },
+      "bytes": 1015
+    }
+  }
+}
