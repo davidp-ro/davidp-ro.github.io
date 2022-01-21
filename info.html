@@ -8,6 +8,8 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Pescariu</title>
+
+    <script type="module" src="/js/loading.js"></script>
   </head>
   <body>
     <noscript>
@@ -24,7 +26,13 @@
         Sorry, this website requires JavaScript to properly function.
       </div>
     </noscript>
-    <!-- Canvas -->
+
+    <div class="loading" style="transition: all 0.5s ease-in-out">
+      <page-loading></page-loading>
+    </div>
+    
+    <main style="opacity: 0; transition: all 1s ease-in-out">
+      <!-- Canvas -->
     <canvas class="orb-canvas"></canvas>
     <!-- Overlay -->
     <div class="overlay">
@@ -37,13 +45,8 @@
           </h1>
           <!-- Description -->
           <p class="overlay-description">
-            Student & Developer from Cluj-Napoca, Romania.
-            <br />
-            <br />
             <strong>
-              Currently the He ad of Development at
-              <a class="text-gradient" href=""> Prisma </a> - Making the world a
-              safer place.
+              Work in progress :)
             </strong>
           </p>
 
@@ -65,6 +68,7 @@
       <span class="desktop"> Hint: Press <kbd>n</kbd> for a new color </span>
       <span class="mobile"> Hint: Refresh for a new color </span>
     </div>
+    </main>
 
     <script type="module" src="/js/base.js"></script>
     <script type="module" src="/js/index.js"></script>

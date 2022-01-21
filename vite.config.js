@@ -12,7 +12,7 @@ const { resolve } = require('path')
         info: resolve(__dirname, 'info.html'),
       }
     }
-  },
+  }
 };
 
 export default config

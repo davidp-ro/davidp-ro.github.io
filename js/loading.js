@@ -14,12 +14,26 @@ class Loading extends HTMLElement {
         <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
         <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
+      <div class="credit"> Created by <a href="https://www.codepen.io/avstorm/pen/RwNzPNN">Andreas Storm on Codepen</a> </div>
     `;
 
     const style = document.createElement("style");
     style.textContent = /*css*/ `
       .loading-container {
         margin-top: 40vh;
+        text-align: center;
+      }
+
+      .credit {
+        font-size: 12px;
+        margin-top: 40vh;
+        color: var(--base);
+      }
+
+      a {
+        color: var(--base);
+        text-decoration: underline;
+        cursor: none;
       }
     
       svg.tea {
