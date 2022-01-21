@@ -3,101 +3,143 @@ import SimplexNoise from "https://cdn.skypack.dev/simplex-noise";
 import * as PIXI from "https://cdn.skypack.dev/pixi.js";
 import { map, random } from "./utils";
 
-// Orb class
+/**
+ * Class representing each individual orb in the background.
+ */
 export default class Orb {
-  // Pixi takes hex colors as hexidecimal literals (0x rather than a string with '#')
   constructor(fill = 0x000000) {
+    /**
+     * Vs it's original radius
+     */
+    this.scale = 1;
+
+    /**
+     * How quickly values step through time
+     */
+    this.delta = 0.002;
+
+    /**
+     * Color
+     */
+    this.fill = fill;
+
+    /**
+     * `SimplexNoise` instance
+     */
     this.simplex = new SimplexNoise();
 
-    // bounds = the area an orb is "allowed" to move within
-    this.bounds = this.setBounds();
-    // initialise the orb's { x, y } values to a random point within it's bounds
+    /**
+     * Only allow the orbs to be in the bottom right-ish
+     */
+    this.bounds = this.getBounds();
+
+    /**
+     * Initialise the orb's position to a random point
+     */
     this.x = random(this.bounds["x"].min, this.bounds["x"].max);
     this.y = random(this.bounds["y"].min, this.bounds["y"].max);
 
-    // how large the orb is vs it's original radius (this will modulate over time)
-    this.scale = 1;
 
-    // what color is the orb?
-    this.fill = fill;
-
-    // the original radius of the orb, set relative to window height
+    /**
+     * Original radius
+     */
     this.radius = random(window.innerHeight / 6, window.innerHeight / 3);
 
-    // starting points in "time" for the noise/self similar random values
-    this.xOff = random(0, 1000);
-    this.yOff = random(0, 1000);
-    // how quickly the noise/self similar random values step through time
-    this.inc = 0.002;
+    /**
+     * Initial x offset in time
+     */
+    this.xOffset = random(0, 1000);
 
-    // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
+    /**
+     * Initial y offset in time
+     */
+    this.yOffset = random(0, 1000);
+
+    /**
+     * `PIXI.Graphics` instance
+     */
     this.graphics = new PIXI.Graphics();
     this.graphics.alpha = 0.825;
 
-    // 250ms after the last window resize event, recalculate orb positions.
+    /**
+     * Recalculate orb positions every time the window resizes
+     */
     window.addEventListener(
       "resize",
       debounce(() => {
-        this.bounds = this.setBounds();
+        this.bounds = this.getBounds();
       }, 250)
     );
   }
 
-  setBounds() {
-    // how far from the { x, y } origin can each orb move
-    const maxDist =
+  /**
+   * Only allow the orbs to be in the bottom right-ish 
+   */
+  getBounds() {
+    /**
+     * How far from the can each orb move depending on screen size
+     */
+    const maxDistance =
       window.innerWidth < 1000 ? window.innerWidth / 3 : window.innerWidth / 5;
-    // the { x, y } origin for each orb (the bottom right of the screen)
-    const originX = window.innerWidth / 1.25;
-    const originY =
+
+    const xOrigin = window.innerWidth / 1.25;
+    const yOrigin =
       window.innerWidth < 1000
         ? window.innerHeight
         : window.innerHeight / 1.375;
 
-    // allow each orb to move x distance away from it's x / y origin
+    // Return values
     return {
       x: {
-        min: originX - maxDist,
-        max: originX + maxDist,
+        min: xOrigin - maxDistance,
+        max: xOrigin + maxDistance,
       },
       y: {
-        min: originY - maxDist,
-        max: originY + maxDist,
+        min: yOrigin - maxDistance,
+        max: yOrigin + maxDistance,
       },
     };
   }
 
+  /**
+   * Advance in time
+   */
   update() {
-    // self similar "psuedo-random" or noise values at a given point in "time"
-    const xNoise = this.simplex.noise2D(this.xOff, this.xOff);
-    const yNoise = this.simplex.noise2D(this.yOff, this.yOff);
-    const scaleNoise = this.simplex.noise2D(this.xOff, this.yOff);
+    // "random" values
+    const xNoise = this.simplex.noise2D(this.xOffset, this.xOffset);
+    const yNoise = this.simplex.noise2D(this.yOffset, this.yOffset);
+    const scaleNoise = this.simplex.noise2D(this.xOffset, this.yOffset);
 
-    // map the xNoise/yNoise values (between -1 and 1) to a point within the orb's bounds
+    // Map the xNoise/yNoise values (between -1 and 1) to a point within the orb's bounds
     this.x = map(xNoise, -1, 1, this.bounds["x"].min, this.bounds["x"].max);
     this.y = map(yNoise, -1, 1, this.bounds["y"].min, this.bounds["y"].max);
-    // map scaleNoise (between -1 and 1) to a scale value somewhere between half of the orb's original size, and 100% of it's original size
+    
+    /**
+     * Map scaleNoise (between -1 and 1) to a scale value somewhere between 
+     * 1/2 of the orb's original size, and 1/1 of it's original size.
+     */
     this.scale = map(scaleNoise, -1, 1, 0.5, 1);
 
-    // step through "time"
-    this.xOff += this.inc;
-    this.yOff += this.inc;
+    // Advance
+    this.xOffset += this.delta;
+    this.yOffset += this.delta;
   }
 
+  /**
+   * Put the orb on the screen
+   */
   render() {
-    // update the PIXI.Graphics position and scale values
+    // Update position and scale values
     this.graphics.x = this.x;
     this.graphics.y = this.y;
     this.graphics.scale.set(this.scale);
 
-    // clear anything currently drawn to graphics
+    // Clear
     this.graphics.clear();
 
-    // tell graphics to fill any shapes drawn after this with the orb's fill color
+    // Draw the orb
     this.graphics.beginFill(this.fill);
-    // draw a circle at { 0, 0 } with it's size set by this.radius
     this.graphics.drawCircle(0, 0, this.radius);
-    // let graphics know we won't be filling in any more shapes
     this.graphics.endFill();
   }
 }

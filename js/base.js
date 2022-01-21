@@ -58,7 +58,7 @@ for (let i = 0; i < 10; i++) {
   orbs.push(orb);
 }
 
-// Animate!
+// Animate according to the user's preference (checks prefers-reduced-motion)
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   app.ticker.add(() => {
     orbs.forEach((orb) => {
@@ -85,14 +85,15 @@ document.addEventListener("keypress", (e) => {
   }
 });
 
-// Init cursor
+// Initialize the cursor
 new Cursor();
 
-// Init magnetic
+// Initialize the magnetic effect
 $("[data-magnetic]").each(function () {
   new Magnetic(this);
 });
 
+// Remove the loading screen
 window.addEventListener("load", () => {
   /** @type {HTMLElement} */
   const el = document.querySelector(".loading");

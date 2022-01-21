@@ -1,55 +1,74 @@
 import hsl from "https://cdn.skypack.dev/hsl-to-hex";
 import { random } from "./utils";
 
-// ColorPalette class
+/**
+ * Handle generating the random palette
+ */
 export default class ColorPalette {
   constructor() {
-    this.setColors();
-    this.setCustomProperties();
+    this.generateColors();
+    this.updateProps();
   }
 
-  setColors() {
-    // pick a random hue somewhere between 220 and 360
+  /**
+   * Generate the color palette and save it in `this.colors`
+   */
+  generateColors() {
+    /**
+     * Random hue
+     */
     this.hue = ~~random(0, 360);
     this.complimentaryHue1 = this.hue + 30;
     this.complimentaryHue2 = this.hue + 60;
-    // define a fixed saturation and lightness
+
     this.saturation = 95;
     this.lightness = 50;
 
-    // define a base color
+    /**
+     * The base color
+     */
     this.baseColor = hsl(this.hue, this.saturation, this.lightness);
-    // define a complimentary color, 30 degress away from the base
+
+    /**
+     * Complimentary color, 30 degress away from the base
+     */
     this.complimentaryColor1 = hsl(
       this.complimentaryHue1,
       this.saturation,
       this.lightness
     );
-    // define a second complimentary color, 60 degrees away from the base
+
+    /**
+     * Second complimentary color, 60 degress away from the base
+     */
     this.complimentaryColor2 = hsl(
       this.complimentaryHue2,
       this.saturation,
       this.lightness
     );
 
-    // store the color choices in an array so that a random one can be picked later
-    this.colorChoices = [
+    this.colors = [
       this.baseColor,
       this.complimentaryColor1,
       this.complimentaryColor2,
     ];
   }
 
+  /**
+   * Pick a random color from the previously generated ones
+   */
   randomColor() {
-    // pick a random color
-    return this.colorChoices[~~random(0, this.colorChoices.length)].replace(
+    return this.colors[~~random(0, this.colors.length)].replace(
       "#",
       "0x"
     );
   }
 
-  setCustomProperties() {
-    // set CSS custom properties so that the colors defined here can be used throughout the UI
+  /**
+   * Set/Update the CSS custom properties so that the colors defined here can be
+   * used throughout the UI (ie. used in the loading screen, etc)
+   */
+  updateProps() {
     document.documentElement.style.setProperty("--hue", this.hue);
     document.documentElement.style.setProperty(
       "--hue-complimentary1",
