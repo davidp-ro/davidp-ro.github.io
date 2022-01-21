@@ -5,9 +5,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Pescariu</title>
+
+    <script src="/js/loading.js" defer></script>
   </head>
   <body>
     <noscript>
@@ -24,87 +26,94 @@
         Sorry, this website requires JavaScript to properly function.
       </div>
     </noscript>
-    <!-- Canvas -->
-    <canvas class="orb-canvas"></canvas>
-    <!-- Overlay -->
-    <div class="overlay">
-      <!-- Overlay inner wrapper -->
-      <div class="overlay-inner">
-        <!-- First Column (main content) -->
-        <div>
-          <!-- Title -->
-          <h1 class="overlay-title">
-            Hi there, I'm
-            <span class="text-gradient">David Pescariu</span>
-          </h1>
-          <!-- Description -->
-          <p class="overlay-description">
-            Student & Developer from Cluj-Napoca, Romania.
-            <br />
-            <br />
-            <strong>
-              Currently the Head of Development at
-              <a class="text-gradient" href=""> Prisma </a> - Making the world a
-              safer place.
-            </strong>
-          </p>
 
-          <!-- Buttons -->
-          <div class="overlay-links">
-            <a
-              href="mailto:davidpescariu12@gmail.com?subject=Hi%20there!"
-              target="_blank"
-              rel="noopener"
-              class="page-link text-gradient animated-underline"
-              data-magnetic
-            >
-              Contact
-            </a>
+    <div class="loading" style="transition: all 0.5s ease-in-out">
+      <page-loading></page-loading>
+    </div>
 
-            <a
-              href="/info.html"
-              class="page-link animated-underline"
-              data-magnetic
-            >
-              More Stuff
-            </a>
+    <main style="opacity: 0; transition: all 1s ease-in-out">
+      <!-- Canvas -->
+      <canvas class="orb-canvas"></canvas>
+      <!-- Overlay -->
+      <div class="overlay">
+        <!-- Overlay inner wrapper -->
+        <div class="overlay-inner">
+          <!-- First Column (main content) -->
+          <div>
+            <!-- Title -->
+            <h1 class="overlay-title">
+              Hi there, I'm
+              <span class="text-gradient">David Pescariu</span>
+            </h1>
+            <!-- Description -->
+            <p class="overlay-description">
+              Student & Developer from Cluj-Napoca, Romania.
+              <br />
+              <br />
+              <strong>
+                Currently the Head of Development at
+                <a class="text-gradient" href=""> Prisma </a> - Making the world
+                a safer place.
+              </strong>
+            </p>
 
-            <a
-              href="assets/David_Pescariu-Resume.pdf"
-              target="_blank"
-              rel="noopener"
-              class="page-link animated-underline"
-              data-magnetic
-            >
-              Résumé
-            </a>
+            <!-- Buttons -->
+            <div class="overlay-links">
+              <a
+                href="mailto:davidpescariu12@gmail.com?subject=Hi%20there!"
+                target="_blank"
+                rel="noopener"
+                class="page-link text-gradient animated-underline"
+                data-magnetic
+              >
+                Contact
+              </a>
+
+              <a
+                href="/info.html"
+                class="page-link animated-underline"
+                data-magnetic
+              >
+                More Stuff
+              </a>
+
+              <a
+                href="assets/David_Pescariu-Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                class="page-link animated-underline"
+                data-magnetic
+              >
+                Résumé
+              </a>
+            </div>
           </div>
-        </div>
-        <!-- END:First Column (main content) -->
+          <!-- END:First Column (main content) -->
 
-        <!-- Second Column -->
-        <div class="right-col">
-          <img
-            class="profile"
-            src="assets/profile.jpg"
-            alt="A picture of me :)"
-          />
-          <div class="socials">
-            <a href="">a</a>
-            <a href="">a</a>
-            <a href="">a</a>
+          <!-- Second Column -->
+          <div class="right-col">
+            <img
+              class="profile"
+              src="assets/profile.jpg"
+              alt="A picture of me :)"
+            />
+            <div class="socials">
+              <a href="">a</a>
+              <a href="">a</a>
+              <a href="">a</a>
+            </div>
           </div>
+          <!-- END:Second Column -->
         </div>
-        <!-- END:Second Column -->
       </div>
-    </div>
 
-    <div class="hint-text">
-      <span class="desktop"> Hint: Press <kbd>n</kbd> for a new color </span>
-      <span class="mobile"> Hint: Refresh for a new color </span>
-    </div>
+      <div class="hint-text">
+        <span class="desktop"> Hint: Press <kbd>n</kbd> for a new color </span>
+        <span class="mobile"> Hint: Refresh for a new color </span>
+      </div>
+    </main>
 
-    <script type="module" src="js/base.js"></script>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="/js/base.js"></script>
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>

@@ -92,3 +92,16 @@ new Cursor();
 $("[data-magnetic]").each(function () {
   new Magnetic(this);
 });
+
+window.addEventListener("load", () => {
+  /** @type {HTMLElement} */
+  const el = document.querySelector(".loading");
+  const main = document.querySelector("main");
+  if (el !== null && el !== undefined) {
+    el.style.opacity = "0";
+    setTimeout(() => {
+      el.style.display = "none";
+      main.style.opacity = "1";
+    }, 500);
+  }
+});
