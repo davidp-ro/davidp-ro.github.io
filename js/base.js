@@ -34,18 +34,15 @@ font-size: 10px;
 
 // Create PixiJS app
 const app = new PIXI.Application({
-  // render to <canvas class="orb-canvas"></canvas>
+  // Bind to the canvas element
   view: document.querySelector(".orb-canvas"),
-  // auto adjust size to fit the current window
   resizeTo: window,
-  // transparent background, we will be creating a gradient background later using CSS
   backgroundAlpha: 0,
 });
+app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
 
 // Create colour palette
 const colorPalette = new ColorPalette();
-
-app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
 
 // Create orbs
 const orbs = [];
@@ -85,12 +82,17 @@ document.addEventListener("keypress", (e) => {
   }
 });
 
-// Initialize the cursor
-new Cursor();
+// Initialize the cursor if we're on desktop
+if (window.matchMedia("(min-width: 840px)").matches) {
+  new Cursor();
+} else {
+  // Make sure we have some kind of cursor if we don't show the fancy one
+  document.querySelector('html').style.cursor = 'auto';
+}
 
 // Initialize the magnetic effect
-$("[data-magnetic]").each(function () {
-  new Magnetic(this);
+document.querySelectorAll('[data-magnetic]').forEach((e) => {
+  new Magnetic(e);
 });
 
 // Remove the loading screen
