@@ -156,18 +156,14 @@ br {
   }
 }
 
-@media screen and (min-width: 1140px) {
-  .mobile {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 1140px) {
   .overlay {
     padding: 8rem 4rem;
   }
+}
 
-  .desktop {
+@media screen and (min-width: 840px) {
+  .mobile {
     display: none;
   }
 }
@@ -175,6 +171,10 @@ br {
 @media only screen and (max-width: 840px) {
   body {
     padding: 1.5rem;
+  }
+
+  .desktop {
+    display: none;
   }
 
   .overlay {
@@ -196,6 +196,10 @@ br {
     font-size: 0.9rem;
     line-height: 1.5rem;
     margin-bottom: 2.5rem;
+  }
+
+  .overlay-links {
+    flex-direction: column;
   }
 }
 

@@ -56,14 +56,51 @@ kbd:hover {
   height: 12rem;
   width: 12rem;
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  user-select: none;
 }
 
 .socials {
   margin-top: 2rem;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.socials a {
+  text-decoration: none;
+  color: var(--dark-color);
+  border-radius: 50%;
+  line-height: 1px;
+  transition: color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.socials svg {
+  height: 1.5em;
+  width: 1.5em;
+  margin: .8em;
+}
+
+.socials a:hover {
+  color: var(--base);
+  background-color: #55555533;
 }
 
 @media only screen and (max-width: 840px) {
   .hint-text {
     margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .page-link:first-child {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+
+  .page-link {
+    margin-right: 1rem;
+
+    margin-left: 1rem;
+    margin-top: 1rem;
   }
 }

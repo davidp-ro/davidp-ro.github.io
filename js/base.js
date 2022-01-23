@@ -76,8 +76,8 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 // Chnage background on keypress
 document.addEventListener("keypress", (e) => {
   if (e.key === "n") {
-    colorPalette.setColors();
-    colorPalette.setCustomProperties();
+    colorPalette.generateColors();
+    colorPalette.updateProps();
 
     orbs.forEach((orb) => {
       orb.fill = colorPalette.randomColor();
