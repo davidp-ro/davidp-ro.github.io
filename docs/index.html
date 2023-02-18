@@ -1,201 +1,322 @@
 <!DOCTYPE html>
-<!-- 
-  Hi there :)
-
-  Icons by FontAwesome. Used under the free license <https://fontawesome.com/license>.
- -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="canonical" href="https://davidp-ro.github.io/">
+    <meta name="generator" content="Astro v2.0.8">
+
+    <!-- General Meta Tags -->
     <title>David Pescariu</title>
+    <meta name="title" content="David Pescariu">
+    <meta name="description" content="A minimal, responsive and SEO-friendly Astro blog theme.">
+    <meta name="author" content="Sat Naing">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="David Pescariu">
+    <meta property="og:description" content="A minimal, responsive and SEO-friendly Astro blog theme.">
+    <meta property="og:url" content="https://davidp-ro.github.io/">
+    <meta property="og:image" content="https://davidp-ro.github.io/astropaper-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://davidp-ro.github.io/">
+    <meta property="twitter:title" content="David Pescariu">
+    <meta property="twitter:description" content="A minimal, responsive and SEO-friendly Astro blog theme.">
+    <meta property="twitter:image" content="https://davidp-ro.github.io/astropaper-og.jpg">
+
+    <!-- Google Font -->
+    <!-- IBM Plex Mono: -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
     
-    <script type="module" crossorigin src="/assets/vendor.0fe98181.js"></script>
-    <script type="module" crossorigin src="/assets/base.71d44293.js"></script>
-    <link rel="stylesheet" href="/assets/base.6fd3a0d8.css">
-    <link rel="stylesheet" href="/assets/index.9c7c4cd6.css">
-  </head>
+
+    <script src="/toggle-theme.js"></script>
+  <link rel="stylesheet" href="/_astro/about.2363dac4.css" />
+<link rel="stylesheet" href="/_astro/index.985b05c0.css" /><script type="module">const e=document.querySelector(".hamburger-menu"),n=document.querySelector("#menu-items")?.classList,t=document.querySelector(".icon-container")?.classList,o=document.querySelector("#first-line")?.classList,a=document.querySelector("#second-line ")?.classList,s=document.querySelector("#third-line")?.classList;e?.addEventListener("click",function(){e?.getAttribute("aria-expanded")==="false"?(e?.setAttribute("aria-expanded","true"),e?.setAttribute("aria-label","Close Menu"),n?.remove("display-none"),t?.remove("flex"),t?.add("relative"),o?.add("rotate-45","absolute","bottom-1/2"),s?.add("display-none"),a?.add("!w-full","-rotate-45","absolute","bottom-1/2")):(e?.setAttribute("aria-expanded","false"),e?.setAttribute("aria-label","Open Menu"),n?.add("display-none"),t?.add("flex"),t?.remove("relative"),o?.remove("rotate-45","absolute","bottom-1/2"),s?.remove("display-none"),a?.remove("!w-full","-rotate-45","absolute","bottom-1/2"))});
+</script></head>
   <body>
-    <noscript>
-      <div
-        style="
-          height: 100vh;
-          color: red;
-          text-align: center;
-          padding-top: 30vh;
-          font-size: 32px;
-          font-family: monospace;
-        "
-      >
-        Sorry, this website requires JavaScript to properly function.
-      </div>
-    </noscript>
-
-    <div class="loading" style="transition: all 0.5s ease-in-out">
-      <page-loading></page-loading>
+    <header class="astro-3EF6KSR2">
+  <a id="skip-to-content" href="#main-content" class="astro-3EF6KSR2">Skip to content</a>
+  <div class="nav-container astro-3EF6KSR2">
+    <div class="top-nav-wrap astro-3EF6KSR2">
+      <a href="/" class="logo astro-3EF6KSR2">
+        David Pescariu
+      </a>
+      <nav id="nav-menu" class="astro-3EF6KSR2">
+        <button class="hamburger-menu focus-outline astro-3EF6KSR2" aria-label="Open Menu" aria-expanded="false" aria-controls="menu-items">
+          <div class="icon-container flex astro-3EF6KSR2">
+            <div id="first-line" class="astro-3EF6KSR2"></div>
+            <div id="second-line" class="astro-3EF6KSR2"></div>
+            <div id="third-line" class="astro-3EF6KSR2"></div>
+          </div>
+        </button>
+        <ul id="menu-items" class="display-none sm:flex astro-3EF6KSR2">
+          <li class="astro-3EF6KSR2">
+            <a href="/" class="active astro-3EF6KSR2">
+              About Me
+            </a>
+          </li>
+          <li class="astro-3EF6KSR2">
+            <a href="/posts" class=" astro-3EF6KSR2">
+              Blog
+            </a>
+          </li>
+          <li class="astro-3EF6KSR2">
+            <a href="/David_Pescariu-Resume.pdf" rel="noopener noreferrer" target="_blank" class="astro-3EF6KSR2">
+              Résumé
+            </a>
+          </li>
+          <li class="astro-3EF6KSR2">
+            <button id="theme-btn" class="focus-outline astro-3EF6KSR2" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                  <svg xmlns="http://www.w3.org/2000/svg" id="moon-svg" class="astro-3EF6KSR2">
+                    <path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z" class="astro-3EF6KSR2"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" id="sun-svg" class="astro-3EF6KSR2">
+                    <path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z" class="astro-3EF6KSR2"></path>
+                  </svg>
+                </button>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </div>
+  <div class="max-w-3xl mx-auto px-4">
+  <hr class="border-skin-line" aria-hidden="true">
+</div>
+</header><main id="main-content" class="astro-J7PV25F6">
+    <section id="hero" class="astro-J7PV25F6">
+      <h1 class="text-skin-accent astro-J7PV25F6">👋 Hello!</h1>
 
-    <main style="opacity: 0; transition: all 1s ease-in-out">
-      <!-- Canvas -->
-      <canvas class="orb-canvas"></canvas>
-      <!-- Overlay -->
-      <div class="overlay">
-        <!-- Overlay inner wrapper -->
-        <div class="overlay-inner">
-          <!-- First Column (main content) -->
-          <div>
-            <!-- Title -->
-            <h1 class="overlay-title">
-              Hi there, I'm
-              <span class="text-gradient">David Pescariu</span>
-            </h1>
-            <!-- Description -->
-            <p class="overlay-description">
-              Student & Developer from Cluj-Napoca, Romania.
-              <br />
-              <br />
-              <strong>
-                Currently the Head of Development at
-                <a
-                  class="text-gradient"
-                  href="https://www.prisma-safety.com/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Prisma
-                </a>
-                - Making the world a safer place.
-              </strong>
-            </p>
-
-            <!-- Buttons -->
-            <div class="overlay-links">
-              <a
-                href="mailto:davidpescariu12@gmail.com?subject=Hi%20there!"
-                target="_blank"
-                rel="noopener"
-                class="page-link text-gradient animated-underline"
-                data-magnetic
-              >
-                Contact
-              </a>
-
-              <a
-                href="/info.html"
-                class="page-link animated-underline"
-                data-magnetic
-              >
-                More Stuff
-              </a>
-
-              <a
-                href="/David_Pescariu-Resume.pdf"
-                target="_blank"
-                rel="noopener"
-                class="page-link animated-underline"
-                data-magnetic
-              >
-                Résumé
-              </a>
+      <p class="astro-J7PV25F6">
+        I'm David - a developer, student, <a type="button" href="https://www.prisma-safety.com/" tabindex="0" class="group hover:text-skin-accent underline underline-offset-4 decoration-dashed astro-J7PV25F6 astro-5EUNQZKT" target="_blank" rel="noopener noreferrer">
+  
+          co-founder
+        
+</a> & volunteer from Cluj, 🇷🇴. Not specifically in that order.
+      </p>
+      <br class="select-none astro-J7PV25F6" aria-hidden="true">
+      <p class="astro-J7PV25F6">
+        I generally work as a full-stack developer, doing anything from mobile
+        apps with Flutter to web apps & pages or backend services.
+      </p>
+      <p class="astro-J7PV25F6">
+        I also volunteer @ <a type="button" href="https://dpit.ro/" tabindex="0" class="group hover:text-skin-accent underline underline-offset-4 decoration-dashed astro-J7PV25F6 astro-5EUNQZKT" target="_blank" rel="noopener noreferrer">
+  
+          Asociația DPIT
+        
+</a> where high school students can experience working in a real
+        company!
+      </p>
+      <div class="social-wrapper astro-J7PV25F6">
+            <div class="social-links astro-J7PV25F6">Socials:</div>
+            <div class="social-icons  astro-UPU6FZXR">
+  <a type="button" href="https://github.com/davidp-ro" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My Github - @davidp-ro">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+    ></path>
+  </svg>
+</a><a type="button" href="https://www.linkedin.com/in/davidpescariu/" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My LinkedIn - @davidpescariu">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+    <line x1="8" y1="11" x2="8" y2="16"></line>
+    <line x1="8" y1="8" x2="8" y2="8.01"></line>
+    <line x1="12" y1="16" x2="12" y2="11"></line>
+    <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+  </svg>
+</a><a type="button" href="https://www.instagram.com/david.pescariu/" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My Instagram - @david.pescariu">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+    <circle cx="12" cy="12" r="3"></circle>
+    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+  </svg>
+</a><a type="button" href="https://www.facebook.com/pescariu.david" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My Facebook - @pescariu.david">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+    ></path>
+  </svg>
+</a>
+</div>
+            <div class="sm:ml-4 astro-J7PV25F6">
+              or just
+              <a type="button" href="mailto:davidpescariu12@gmail.com?subject=Hello!" tabindex="0" class="group hover:text-skin-accent underline underline-offset-4 decoration-dashed astro-J7PV25F6 astro-5EUNQZKT" title="davidpescariu12 (at) gmail (dot) com" target="_blank" rel="noopener noreferrer">
+  
+                write me an email
+              
+</a>
+              !
             </div>
           </div>
-          <!-- END:First Column (main content) -->
+    </section>
 
-          <!-- Second Column -->
-          <div class="right-col">
-            <img
-              class="profile desktop"
-              src="/profile.jpg"
-              alt="A picture of me :)"
-            />
-            <div class="socials">
-              <a
-                href="https://github.com/davidp-ro"
-                target="_blank"
-                rel="noopener"
-                data-magnetic
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  viewBox="0 0 496 512"
-                  data-magnetic
-                >
-                  <path
-                    fill="currentColor"
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/davidpescariu/"
-                target="_blank"
-                rel="noopener"
-                data-magnetic
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  viewBox="0 0 448 512"
-                  data-magnetic
-                >
-                  <path
-                    fill="currentColor"
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/david.pescariu/"
-                target="_blank"
-                rel="noopener"
-                data-magnetic
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  viewBox="0 0 448 512"
-                  data-magnetic
-                >
-                  <path
-                    fill="currentColor"
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8a26.8 26.8 0 1 1 26.8-26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388a75.63 75.63 0 0 1-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9A75.63 75.63 0 0 1 49.4 388c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1A75.63 75.63 0 0 1 92 81.2c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9a75.63 75.63 0 0 1 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://twitter.com/DPescariu"
-                target="_blank"
-                rel="noopener"
-                data-magnetic
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  viewBox="0 0 512 512"
-                  data-magnetic
-                >
-                  <path
-                    fill="currentColor"
-                    d="M459.37 151.72c.33 4.54.33 9.1.33 13.64 0 138.72-105.59 298.56-298.56 298.56-59.45 0-114.68-17.22-161.14-47.1 8.45.97 16.57 1.3 25.34 1.3 49.05 0 94.21-16.58 130.27-44.84a105.12 105.12 0 0 1-98.1-72.77c6.49.97 12.99 1.62 19.81 1.62 9.42 0 18.84-1.3 27.61-3.57A104.95 104.95 0 0 1 20.8 195.57v-1.3a105.68 105.68 0 0 0 47.43 13.32 104.86 104.86 0 0 1-46.78-87.39c0-19.49 5.2-37.36 14.3-52.95a298.27 298.27 0 0 0 216.36 109.8c-1.62-7.8-2.6-15.91-2.6-24.03 0-57.83 46.78-104.94 104.94-104.94 30.2 0 57.5 12.67 76.67 33.14a206.6 206.6 0 0 0 66.6-25.34 104.65 104.65 0 0 1-46.14 57.83c21.12-2.28 41.59-8.13 60.43-16.25a225.57 225.57 0 0 1-52.63 54.26z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <!-- END:Second Column -->
-        </div>
+    <div class="max-w-3xl mx-auto px-4">
+  <hr class="border-skin-line" aria-hidden="true">
+</div>
+
+    <section id="featured" class="astro-J7PV25F6">
+      <h2 class="astro-J7PV25F6">My Work</h2>
+      <ul class="astro-J7PV25F6">
+        <li class="my-6"><h3 class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0">Co-Founder &amp; Head of Development - Prisma</h3><p class="text-gray-500 italic text-sm opacity-80"> <svg xmlns="http://www.w3.org/2000/svg" class="scale-80 inline-block h-6 w-6 fill-skin-base" aria-hidden="true"><path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path></svg> <!-- -->Apr 2021 - Present</p><div class="ml-10 mt-2"><ul class="list-disc astro-J7PV25F6">
+            <li class="astro-J7PV25F6">
+              Manage development & implement the Prisma App (Flutter), Prisma
+              Websites & Platforms (Svelte/SvelteKit) and all backend
+              infrastructure - public and private REST APIs.
+            </li>
+            <li class="astro-J7PV25F6">
+              Develop caching systems using HiveDB to decrease the mobile app's
+              startup time by 5 times
+            </li>
+            <li class="astro-J7PV25F6">
+              Implement billing services with Stripe and authentication flows
+              using Auth0.
+            </li>
+            <li class="astro-J7PV25F6">
+              Handle CI / CD of our platforms - Front facing platforms on
+              Netlify and backend infra on Heroku and Lambdas.
+            </li>
+            <li class="astro-J7PV25F6">
+              If anything ever happened to you, submit a report on the <a type="button" href="https://reports.prisma-safety.com/" tabindex="0" class="group hover:text-skin-accent underline underline-offset-4 decoration-dashed astro-J7PV25F6 astro-5EUNQZKT" title="Open the platform (new tab)" target="_blank" rel="noopener noreferrer">
+  
+                Open Reports platform
+              
+</a>!
+            </li>
+          </ul></div></li>
+
+        <li class="my-6"><h3 class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0">Freelance Web Developer</h3><p class="text-gray-500 italic text-sm opacity-80"> <svg xmlns="http://www.w3.org/2000/svg" class="scale-80 inline-block h-6 w-6 fill-skin-base" aria-hidden="true"><path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path></svg> <!-- -->Nov 2020 - Mar 2021</p><div class="ml-10 mt-2"><ul class="list-disc astro-J7PV25F6">
+            <li class="astro-J7PV25F6">
+              Design & Implement mobile-first web experiences using Svelte suited to my client's needs  
+            </li>
+            <li class="astro-J7PV25F6">
+              Increased traffic to their platforms by up to 80%, thus improving their long-term revenue and reach.
+            </li>
+            <li class="astro-J7PV25F6">
+              Constantly engaged with my customers to ensure satisfaction.
+            </li>
+          </ul></div></li>
+      </ul>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-4">
+  <hr class="border-skin-line" aria-hidden="true">
+</div>
+
+    <section id="recent-posts" class="astro-J7PV25F6">
+      <h2 class="astro-J7PV25F6">Blog Posts</h2>
+      <ul class="astro-J7PV25F6">
+        <li class="my-6"><a href="/posts/hello-world" class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"><h3 class="text-lg font-medium decoration-dashed hover:underline">Hello World!</h3></a><div class="flex items-center space-x-2 opacity-80 undefined"><svg xmlns="http://www.w3.org/2000/svg" class="scale-90 inline-block h-6 w-6 fill-skin-base" aria-hidden="true"><path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path></svg><span class="sr-only">Posted on:</span><span class="italic text-sm">February 18, 2023<span aria-hidden="true"> | </span><span class="sr-only"> at </span>06:00 PM</span></div><p>First blog post!</p></li>
+      </ul>
+      <div class="all-posts-btn-wrapper astro-J7PV25F6">
+        <a type="button" href="/posts" tabindex="0" class="group undefined astro-5EUNQZKT">
+  
+          All Posts
+          <svg xmlns="http://www.w3.org/2000/svg" class="astro-J7PV25F6"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" class="astro-J7PV25F6"></path>
+          </svg>
+</a>
       </div>
-
-      <div class="hint-text">
-        <span class="desktop"> Hint: Press <kbd>n</kbd> for a new color </span>
-        <span class="mobile"> Hint: Refresh for a new color </span>
-      </div>
-    </main>
-
-    
-    
-  </body>
-</html>
+    </section>
+  </main><footer class="mt-auto astro-SZ7XMLTE">
+  <div class="max-w-3xl mx-auto px-0">
+  <hr class="border-skin-line" aria-hidden="true">
+</div>
+  <div class="footer-wrapper astro-SZ7XMLTE">
+    <div class="copyright-wrapper astro-SZ7XMLTE">
+      <span class="astro-SZ7XMLTE">
+        Copyright &#169; 2023 | All rights reserved.
+        <br class="astro-SZ7XMLTE">
+        <small class="astro-SZ7XMLTE">
+          Built with 🧡 & Astro (<a href="https://github.com/satnaing/astro-paper" class="astro-SZ7XMLTE">AstroPaper</a>) + React.
+        </small>
+      </span>
+    </div>
+    <div class="social-icons flex astro-UPU6FZXR">
+  <a type="button" href="https://github.com/davidp-ro" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My Github - @davidp-ro">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+    ></path>
+  </svg>
+</a><a type="button" href="https://www.linkedin.com/in/davidpescariu/" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My LinkedIn - @davidpescariu">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+    <line x1="8" y1="11" x2="8" y2="16"></line>
+    <line x1="8" y1="8" x2="8" y2="8.01"></line>
+    <line x1="12" y1="16" x2="12" y2="11"></line>
+    <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+  </svg>
+</a><a type="button" href="https://www.instagram.com/david.pescariu/" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My Instagram - @david.pescariu">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+    <circle cx="12" cy="12" r="3"></circle>
+    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+  </svg>
+</a><a type="button" href="https://www.facebook.com/pescariu.david" tabindex="0" class="group link-button astro-UPU6FZXR astro-5EUNQZKT" title="My Facebook - @pescariu.david">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path
+      d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+    ></path>
+  </svg>
+</a>
+</div>
+  </div>
+</footer>
+  </body></html>
