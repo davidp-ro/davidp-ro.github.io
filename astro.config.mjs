@@ -8,7 +8,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://davidp-ro.github.io/",
-  outDir: "./docs",
   integrations: [
     tailwind({
       config: {
