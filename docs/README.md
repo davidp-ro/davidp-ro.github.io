@@ -1,1 +1,0 @@
-# Not actual docs, just used to redirect davidp-ro.github.io to davidpescariu.com
